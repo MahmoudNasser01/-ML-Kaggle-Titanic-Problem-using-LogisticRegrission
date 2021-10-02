@@ -18,7 +18,7 @@ In this challenge, we ask you to build a predictive model that answers the quest
 
 <br/>
 
-<details open="open">
+## <details open="open">
   <summary>Table of Contents</summary>
   <ol>
      <li>Analuze and visilaze the Dataset</li>
