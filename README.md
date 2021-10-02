@@ -14,8 +14,14 @@ here you will find the solution for the titanic problem on kaggle with comments 
    ```py
       print(data_train.head())
    ```
-
-<!------Here We but an image ----->
+   ```sh
+   PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S   
+```
 
 ## Note
    ```sh
@@ -24,7 +30,7 @@ here you will find the solution for the titanic problem on kaggle with comments 
 
 ### count the number of the Survived and the deaths
    ```py
-   print(data_train['Survived'].value_counts())  # (342 Survived) | (549 not survived)
+   data_train['Survived'].value_counts()  # (342 Survived) | (549 not survived)
    ```
 
 ### plot the amount of the survived and the deaths
@@ -33,7 +39,7 @@ here you will find the solution for the titanic problem on kaggle with comments 
    plt.bar(list(data_train['Survived'].value_counts().keys()), (list(data_train['Survived'].value_counts())),
         color=['r', 'g'])
    ```
-
+<img src="https://github.com/elMeniwy/-ML-Kaggle-Titanic-Problem-using-LogisticRegrission/blob/main/images/deaths-survived.jpg">
     
 ### analyze the age
    ```py
@@ -47,7 +53,7 @@ plt.show()
 <!------- Show Image Here ------>
 
 
-## Now after we made some analyze here and their, it's time to clean up our data If you take a look to the avalible columns we you may noticed that some columns are useless so they may affect on our model performance.
+### Note: Now after we made some analyze here and their, it's time to clean up our data If you take a look to the avalible columns we you may noticed that some columns are useless so they may affect on our model performance.
 
 #### Here we make our cleaning function
 ```py
