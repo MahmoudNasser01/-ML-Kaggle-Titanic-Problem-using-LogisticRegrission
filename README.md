@@ -16,6 +16,7 @@ While there was some element of luck involved in surviving, it seems some groups
 
 In this challenge, we ask you to build a predictive model that answers the question: “what sorts of people were more likely to survive?” using passenger data (ie name, age, gender, socio-economic class, etc).
 
+<br/>
 
 
 ### Load & Analyze Our Dataset
@@ -23,8 +24,10 @@ In this challenge, we ask you to build a predictive model that answers the quest
    ```py
    data_train = pd.read_csv('titanic/train.csv')
    data_test = pd.read_csv('titanic/test.csv')
+
    ```
-   
+  <br/>
+  
 ### visilyze the given data
    ```py
       print(data_train.head())
@@ -37,12 +40,12 @@ In this challenge, we ask you to build a predictive model that answers the quest
 3            4         1       1  ...  53.1000  C123         S
 4            5         0       3  ...   8.0500   NaN         S   
 ```
-
+<br/>
 ## Note
    ```sh
       The Survived column  is what we’re trying to predict. We call this column the (target) and remaining columns are called (features)
    ```
-
+<br/>
 ### count the number of the Survived and the deaths
    ```py
    data_train['Survived'].value_counts()  # (342 Survived) | (549 not survived)
@@ -54,8 +57,9 @@ In this challenge, we ask you to build a predictive model that answers the quest
    plt.bar(list(data_train['Survived'].value_counts().keys()), (list(data_train['Survived'].value_counts())),
         color=['r', 'g'])
    ```
+
 <img src="https://github.com/elMeniwy/-ML-Kaggle-Titanic-Problem-using-LogisticRegrission/blob/main/images/deaths-survived.jpg">
-    
+  <br/>  
 ### analyze the age
    ```py
 plt.figure(figsize=(5, 7))
@@ -66,7 +70,7 @@ plt.show()
 
    ```
 <img src="https://github.com/elMeniwy/-ML-Kaggle-Titanic-Problem-using-LogisticRegrission/blob/main/images/age.png">
-
+<br/>
 
 ### Note: Now after we made some analyze here and their, it's time to clean up our data If you take a look to the avalible columns we you may noticed that some columns are useless so they may affect on our model performance.
 
@@ -93,7 +97,7 @@ plt.show()
 data_train = clean(data_train)
 data_test = clean(data_test)
 ```
-
+<br/>
 ## Note: now we need to change the sex feature into a numeric value like [1] for male and [0] female and also for the Embarked feature
 
 ### Here we used preprocessing method in sklearn to do this job
@@ -104,7 +108,7 @@ for col in cols:
     data_train[col] = le.fit_transform(data_train[col])
     data_test[col] = le.fit_transform(data_test[col])
  ```
- 
+<br/> 
 ## now our data is ready! it's time to build our model
 
 ### we select the target column ['Survived'] to store it in [Y] and drop it from the original data
@@ -131,7 +135,7 @@ model.fit(x_train, y_train)
 predictions = model.predict(x_val)
 ```
 
-
+<br/>
 ## Great !!! our model is now finished and ready to use
 
 ### It's time to check the accuracy for our model
