@@ -59,7 +59,7 @@ In this challenge, we ask you to build a predictive model that answers the quest
    ```
 
 <img src="https://github.com/elMeniwy/-ML-Kaggle-Titanic-Problem-using-LogisticRegrission/blob/main/images/deaths-survived.jpg">
-  <br/>  
+  
 ### analyze the age
    ```py
 plt.figure(figsize=(5, 7))
@@ -67,7 +67,6 @@ plt.hist(data_train['Age'], color='Purple')
 plt.title('Age Distribuation')
 plt.xlabel('Age')
 plt.show()
-
    ```
 <img src="https://github.com/elMeniwy/-ML-Kaggle-Titanic-Problem-using-LogisticRegrission/blob/main/images/age.png">
 <br/>
@@ -75,6 +74,7 @@ plt.show()
 ### Note: Now after we made some analyze here and their, it's time to clean up our data If you take a look to the avalible columns we you may noticed that some columns are useless so they may affect on our model performance.
 
 #### Here we make our cleaning function
+
 ```py
    def clean(data):
     # here we drop the unwanted data
