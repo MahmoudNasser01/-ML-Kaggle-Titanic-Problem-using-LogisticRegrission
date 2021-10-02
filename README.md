@@ -18,6 +18,18 @@ In this challenge, we ask you to build a predictive model that answers the quest
 
 <br/>
 
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+     <li>Analuze and visilaze the Dataset</li>
+     <li>Clean and prepare the dataset for our ML model</li>
+     <li>Build & Train Our Model</li>
+     <li>Caluclate the Accuracy for the model</li>
+     <li>Prepare the submission file to submit it to kaggle </li>
+  </ol>
+</details>
+
+<br/>
 
 ### Load & Analyze Our Dataset
 * First we read the data from the csv files
