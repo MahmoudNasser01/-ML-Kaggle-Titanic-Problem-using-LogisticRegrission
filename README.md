@@ -50,7 +50,7 @@ plt.xlabel('Age')
 plt.show()
 
    ```
-<!------- Show Image Here ------>
+<img src="https://github.com/elMeniwy/-ML-Kaggle-Titanic-Problem-using-LogisticRegrission/blob/main/images/age.png">
 
 
 ### Note: Now after we made some analyze here and their, it's time to clean up our data If you take a look to the avalible columns we you may noticed that some columns are useless so they may affect on our model performance.
